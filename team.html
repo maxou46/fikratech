@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team | Fikra Tech</title>
+  <meta name="description" content="Meet the founders of Fikra Tech and Hostec."/>
+  <meta name="theme-color" content="#0b1223"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+  <div class="bg-blob one"></div><div class="bg-blob two"></div><div class="bg-blob three"></div>
+  <div class="noise"></div>
+  <canvas id="particles"></canvas>
+
+  <!-- NAV -->
+  <nav class="fixed w-full z-50 bg-gray-900/70 backdrop-blur border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold gradient-text">Fikra Tech</a>
+      <div class="hidden md:flex space-x-6 text-sm items-center">
+        <a data-nav class="navlink" href="services.html">Services</a>
+        <a data-nav class="navlink" href="hosting.html">Hostec</a>
+        <a data-nav class="navlink" href="work.html">Work</a>
+        <a data-nav class="navlink" href="team.html">Team</a>
+        <a data-nav class="navlink" href="contact.html">Contact</a>
+        <a class="btn-glow px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition text-sm" href="contact.html">Get a Quote</a>
+      </div>
+      <button id="menuBtn" aria-expanded="false" class="md:hidden text-gray-200 text-xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <div id="mobileMenu" class="md:hidden border-t border-gray-800 bg-gray-900/70 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3 text-sm">
+        <a data-nav class="navlink" href="services.html">Services</a>
+        <a data-nav class="navlink" href="hosting.html">Hostec</a>
+        <a data-nav class="navlink" href="work.html">Work</a>
+        <a data-nav class="navlink" href="team.html">Team</a>
+        <a data-nav class="navlink" href="contact.html">Contact</a>
+        <a class="btn-glow px-4 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition text-center" href="contact.html">Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-6 pt-28 pb-20">
+    <header class="reveal">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Meet the <span class="gradient-text">founders</span></h1>
+      <p class="text-gray-300/90 max-w-3xl">
+        Two founders, one mission: ship premium web + cloud solutions and build stable subscription revenue with managed hosting.
+      </p>
+      <div class="mt-8 divider"></div>
+    </header>
+
+    <section class="grid md:grid-cols-2 gap-8 mt-12">
+      <!-- You -->
+      <div class="reveal delay-1 glass rounded-3xl p-8 card-hover">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h2 class="text-2xl font-bold">Hamouti Mohamed Anes</h2>
+            <p class="text-gray-400">Co-Founder • Cloud & Systems</p>
+          </div>
+          <div class="text-indigo-300 text-3xl"><i class="fa-solid fa-cloud"></i></div>
+        </div>
+
+        <p class="text-gray-300/90 mt-5">
+          Focus: cloud deployments, networking, automation, and keeping systems reliable.
+          Comfortable with Linux, Docker, CI/CD, and modern web stacks.
+        </p>
+
+        <div class="mt-6 grid grid-cols-2 gap-3 text-sm text-gray-300">
+          <div class="glass rounded-xl p-3">AWS / Azure</div>
+          <div class="glass rounded-xl p-3">Linux / Docker</div>
+          <div class="glass rounded-xl p-3">Networking</div>
+          <div class="glass rounded-xl p-3">CI/CD</div>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a class="btn-glow px-5 py-2 rounded-lg border border-indigo-500 hover:border-indigo-400 font-semibold transition text-sm"
+             href="https://anesm-dev.github.io/" target="_blank" rel="noopener">See Portfolio</a>
+          <a class="btn-glow px-5 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition text-sm"
+             href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <!-- Friend -->
+      <div class="reveal delay-2 glass rounded-3xl p-8 card-hover">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h2 class="text-2xl font-bold">Co-Founder (Full-Stack)</h2>
+            <p class="text-gray-400">Co-Founder • Full-Stack Engineering</p>
+          </div>
+          <div class="text-emerald-300 text-3xl"><i class="fa-solid fa-code"></i></div>
+        </div>
+
+        <p class="text-gray-300/90 mt-5">
+          Focus: full-stack development, UI/UX, backend systems, APIs, and shipping products end-to-end.
+        </p>
+
+        <div class="mt-6 grid grid-cols-2 gap-3 text-sm text-gray-300">
+          <div class="glass rounded-xl p-3">Frontend</div>
+          <div class="glass rounded-xl p-3">Backend</div>
+          <div class="glass rounded-xl p-3">Databases</div>
+          <div class="glass rounded-xl p-3">Web Maintenance</div>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a class="btn-glow px-5 py-2 rounded-lg border border-indigo-500 hover:border-indigo-400 font-semibold transition text-sm"
+             href="https://riyadhs46.github.io">See Portfolio</a>
+          <a class="btn-glow px-5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 font-semibold transition text-sm"
+             href="contact.html">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-14 reveal glass rounded-3xl p-8">
+      <h2 class="text-2xl font-bold mb-3">Our structure</h2>
+      <p class="text-gray-400">
+        <span class="text-indigo-300 font-semibold">Fikra Tech</span> = one-time builds (websites, web apps, dashboards, deployments).<br/>
+        <span class="text-emerald-300 font-semibold">Hostec</span> = monthly subscriptions (hosting + monitoring + maintenance).
+      </p>
+    </section>
+  </main>
+
+  <footer class="text-center py-10 border-t border-gray-800">
+    <p class="text-gray-500 text-sm">© 2026 Fikra Tech • Team</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

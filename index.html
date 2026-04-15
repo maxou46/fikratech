@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fikra Tech | Web, Cloud & Managed Hosting</title>
+  <meta name="description" content="Fikra Tech builds premium websites, web apps, and cloud deployments. Hostec provides managed hosting with SSL, backups, monitoring, and maintenance."/>
+  <meta name="theme-color" content="#0b1223"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+
+<body>
+  <div class="bg-blob one"></div>
+  <div class="bg-blob two"></div>
+  <div class="bg-blob three"></div>
+  <div class="noise"></div>
+  <canvas id="particles"></canvas>
+
+  <!-- NAV -->
+  <nav class="fixed w-full z-50 bg-gray-900/70 backdrop-blur border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold gradient-text">Fikra Tech</a>
+
+      <div class="hidden md:flex space-x-6 text-sm items-center">
+        <a data-nav class="navlink" href="services.html">Services</a>
+        <a data-nav class="navlink" href="hosting.html">Hostec</a>
+        <a data-nav class="navlink" href="work.html">Work</a>
+        <a data-nav class="navlink" href="team.html">Team</a>
+        <a data-nav class="navlink" href="contact.html">Contact</a>
+        <a class="btn-glow px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition text-sm" href="contact.html">
+          Get a Quote
+        </a>
+      </div>
+
+      <button id="menuBtn" aria-expanded="false" class="md:hidden text-gray-200 text-xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden border-t border-gray-800 bg-gray-900/70 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3 text-sm">
+        <a data-nav class="navlink" href="services.html">Services</a>
+        <a data-nav class="navlink" href="hosting.html">Hostec</a>
+        <a data-nav class="navlink" href="work.html">Work</a>
+        <a data-nav class="navlink" href="team.html">Team</a>
+        <a data-nav class="navlink" href="contact.html">Contact</a>
+        <a class="btn-glow px-4 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition text-center" href="contact.html">
+          Get a Quote
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO (BIG) -->
+  <header class="max-w-7xl mx-auto px-6 pt-28 pb-14 relative">
+    <div class="reveal">
+      <div class="flex flex-wrap gap-2 mb-7">
+        <span class="badge"><i class="fa-solid fa-wand-magic-sparkles text-violet-300"></i> Premium agency build</span>
+        <span class="badge"><i class="fa-solid fa-code text-indigo-300"></i> Web & Cloud Studio</span>
+        <span class="badge"><i class="fa-solid fa-shield text-emerald-300"></i> Hostec Managed Hosting</span>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
+        <!-- Left -->
+        <div class="lg:col-span-7">
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6">
+            Build a <span class="gradient-text">premium website</span><br/>
+            that sells — <span class="typebar">then keep it stable.</span>
+          </h1>
+
+          <p class="text-gray-300/90 text-lg md:text-xl max-w-2xl mb-8">
+            Fikra Tech designs and develops modern websites & web apps.
+            Hostec keeps everything running: SSL, backups, monitoring, updates, and performance.
+          </p>
+
+          <div class="flex flex-wrap gap-4 mb-10">
+            <a href="contact.html" class="btn-glow px-7 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-semibold transition">
+              Start a Project
+            </a>
+            <a href="work.html" class="btn-glow px-7 py-4 rounded-xl border border-indigo-500 hover:border-indigo-400 font-semibold transition">
+              View Work
+            </a>
+            <a href="hosting.html" class="btn-glow px-7 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 font-semibold transition">
+              Hosting Plans
+            </a>
+          </div>
+
+          <!-- Proof mini row -->
+          <div class="grid sm:grid-cols-3 gap-4">
+            <div class="glass rounded-2xl p-5 card-hover reveal delay-1">
+              <div class="text-indigo-300 font-semibold mb-1"><i class="fa-solid fa-bolt mr-2"></i>Fast Delivery</div>
+              <p class="text-gray-400 text-sm">Clear scope + timeline. Clean delivery.</p>
+            </div>
+            <div class="glass rounded-2xl p-5 card-hover reveal delay-2">
+              <div class="text-indigo-300 font-semibold mb-1"><i class="fa-solid fa-gauge-high mr-2"></i>Performance</div>
+              <p class="text-gray-400 text-sm">Speed-first builds for conversions.</p>
+            </div>
+            <div class="glass rounded-2xl p-5 card-hover reveal delay-3">
+              <div class="text-indigo-300 font-semibold mb-1"><i class="fa-solid fa-shield-halved mr-2"></i>Reliability</div>
+              <p class="text-gray-400 text-sm">Hostec handles the boring ops.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div class="lg:col-span-5">
+          <!-- Metrics cards -->
+          <div class="grid grid-cols-2 gap-4 reveal delay-1">
+            <div class="glass rounded-2xl p-6 card-hover">
+              <div class="text-4xl font-bold gradient-text" id="metric_clients">0+</div>
+              <p class="text-gray-400 text-sm mt-2" id="metric_clients_label">Clients served (update as you grow)</p>
+            </div>
+            <div class="glass rounded-2xl p-6 card-hover">
+              <div class="text-4xl font-bold gradient-text" id="metric_success">—%</div>
+              <p class="text-gray-400 text-sm mt-2" id="metric_success_label">Success rate (fill when you have data)</p>
+            </div>
+            <div class="glass rounded-2xl p-6 card-hover">
+              <div class="text-4xl font-bold gradient-text" id="metric_response">&lt; 2h</div>
+              <p class="text-gray-400 text-sm mt-2" id="metric_response_label">Avg response time target</p>
+            </div>
+            <div class="glass rounded-2xl p-6 card-hover">
+              <div class="text-4xl font-bold gradient-text" id="metric_uptime">99.9%</div>
+              <p class="text-gray-400 text-sm mt-2" id="metric_uptime_label">Uptime goal (Hostec)</p>
+            </div>
+          </div>
+
+          <!-- “What you get” panel -->
+          <div class="glass rounded-3xl p-7 mt-5 card-hover reveal delay-2">
+            <div class="text-sm text-gray-400 mb-2">In every project</div>
+            <ul class="text-gray-300 text-sm space-y-2">
+              <li>✅ Modern premium UI</li>
+              <li>✅ Contact funnel (form + WhatsApp)</li>
+              <li>✅ SEO basics + fast loading</li>
+              <li>✅ Deployment + SSL + domain setup</li>
+              <li>✅ Optional Hostec subscription</li>
+            </ul>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="services.html" class="btn-glow px-5 py-3 rounded-xl border border-indigo-500 hover:border-indigo-400 font-semibold transition text-sm">
+                Services
+              </a>
+              <a href="team.html" class="btn-glow px-5 py-3 rounded-xl bg-gray-800/70 border border-gray-700 hover:border-gray-600 font-semibold transition text-sm">
+                Meet the Team
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-14 divider"></div>
+    </div>
+  </header>
+
+  <!-- SERVICES PREVIEW -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 reveal">
+      What we <span class="gradient-text">do</span>
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="glass rounded-3xl p-8 card-hover reveal delay-1">
+        <div class="text-indigo-300 text-3xl mb-4"><i class="fa-solid fa-window-maximize"></i></div>
+        <h3 class="text-2xl font-bold mb-3">Websites & Landing Pages</h3>
+        <p class="text-gray-400 mb-6">Premium design, fast load, clear CTA — built to convert.</p>
+        <a href="services.html" class="text-indigo-300 hover:underline font-semibold">Explore →</a>
+      </div>
+
+      <div class="glass rounded-3xl p-8 card-hover reveal delay-2">
+        <div class="text-indigo-300 text-3xl mb-4"><i class="fa-solid fa-chart-line"></i></div>
+        <h3 class="text-2xl font-bold mb-3">Web Apps & Dashboards</h3>
+        <p class="text-gray-400 mb-6">Admin panels, portals, auth, database, workflows.</p>
+        <a href="services.html" class="text-indigo-300 hover:underline font-semibold">Explore →</a>
+      </div>
+
+      <div class="glass rounded-3xl p-8 card-hover reveal delay-3">
+        <div class="text-emerald-300 text-3xl mb-4"><i class="fa-solid fa-server"></i></div>
+        <h3 class="text-2xl font-bold mb-3">Hostec Managed Hosting</h3>
+        <p class="text-gray-400 mb-6">SSL, backups, monitoring, updates, maintenance.</p>
+        <a href="hosting.html" class="text-emerald-300 hover:underline font-semibold">See plans →</a>
+      </div>
+    </div>
+
+    <div class="text-center mt-12 reveal">
+      <a href="services.html" class="btn-glow px-8 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-semibold transition">
+        See Detailed Services
+      </a>
+    </div>
+  </section>
+
+  <!-- WHY US (BIG) -->
+  <section class="max-w-7xl mx-auto px-6 pb-20">
+    <div class="glass rounded-[28px] p-10 md:p-12 reveal card-hover">
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-6">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Why clients choose <span class="gradient-text">Fikra Tech</span>
+          </h2>
+          <p class="text-gray-400 text-lg">
+            You don’t just get a “website”. You get a system: design + build + deployment + reliability.
+            And if you want monthly stability, Hostec handles operations.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="work.html" class="btn-glow px-7 py-3 rounded-xl border border-indigo-500 hover:border-indigo-400 font-semibold transition">
+              See Work
+            </a>
+            <a href="contact.html" class="btn-glow px-7 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 font-semibold transition">
+              Talk to Us
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 grid sm:grid-cols-2 gap-5">
+          <div class="glass rounded-2xl p-6 card-hover reveal delay-1">
+            <div class="text-indigo-300 font-semibold mb-2"><i class="fa-solid fa-pen-ruler mr-2"></i>Design that sells</div>
+            <p class="text-gray-400 text-sm">Clean layout, strong headline, clear CTA, trust blocks.</p>
+          </div>
+          <div class="glass rounded-2xl p-6 card-hover reveal delay-2">
+            <div class="text-indigo-300 font-semibold mb-2"><i class="fa-solid fa-rocket mr-2"></i>Speed-first build</div>
+            <p class="text-gray-400 text-sm">Fast loading improves SEO and conversions.</p>
+          </div>
+          <div class="glass rounded-2xl p-6 card-hover reveal delay-3">
+            <div class="text-emerald-300 font-semibold mb-2"><i class="fa-solid fa-shield mr-2"></i>Hosting stability</div>
+            <p class="text-gray-400 text-sm">SSL, backups, monitoring, maintenance.</p>
+          </div>
+          <div class="glass rounded-2xl p-6 card-hover reveal delay-4">
+            <div class="text-emerald-300 font-semibold mb-2"><i class="fa-solid fa-gears mr-2"></i>Automation mindset</div>
+            <p class="text-gray-400 text-sm">Safer deployments, fewer mistakes, easier updates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MINI WORK SHOWCASE -->
+  <section class="max-w-7xl mx-auto px-6 pb-20">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 reveal">
+      Work <span class="gradient-text">preview</span>
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="glass rounded-3xl p-8 card-hover reveal delay-1">
+        <div class="text-indigo-300 font-bold mb-2">Restaurant Website</div>
+        <h3 class="text-2xl font-bold mb-3">Menu + WhatsApp booking</h3>
+        <p class="text-gray-400 mb-5">Mobile-first experience with a strong CTA funnel.</p>
+        <a href="work.html" class="text-indigo-300 hover:underline font-semibold">Read more →</a>
+      </div>
+
+      <div class="glass rounded-3xl p-8 card-hover reveal delay-2">
+        <div class="text-indigo-300 font-bold mb-2">Business Landing</div>
+        <h3 class="text-2xl font-bold mb-3">Lead generation layout</h3>
+        <p class="text-gray-400 mb-5">Trust blocks + conversion sections designed to sell.</p>
+        <a href="work.html" class="text-indigo-300 hover:underline font-semibold">Read more →</a>
+      </div>
+
+      <div class="glass rounded-3xl p-8 card-hover reveal delay-3">
+        <div class="text-emerald-300 font-bold mb-2">Hostec Setup</div>
+        <h3 class="text-2xl font-bold mb-3">Managed hosting pipeline</h3>
+        <p class="text-gray-400 mb-5">SSL, backups, monitoring, updates, and stability.</p>
+        <a href="hosting.html" class="text-emerald-300 hover:underline font-semibold">See plans →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA (BIG) -->
+  <section class="max-w-7xl mx-auto px-6 pb-24">
+    <div class="glass rounded-[30px] p-10 md:p-14 reveal card-hover text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        Ready to launch something <span class="gradient-text">serious</span>?
+      </h2>
+      <p class="text-gray-400 text-lg max-w-3xl mx-auto mb-10">
+        Tell us your business, your goal, and your timeline. We’ll reply with scope + plan + price.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contact.html" class="btn-glow px-9 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-semibold transition">
+          Get a Quote
+        </a>
+        <a href="team.html" class="btn-glow px-9 py-4 rounded-xl border border-indigo-500 hover:border-indigo-400 font-semibold transition">
+          Meet the Team
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-10 border-t border-gray-800">
+    <p class="text-gray-500 text-sm">© 2026 Fikra Tech • Web, Cloud & Managed Hosting (Hostec).</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

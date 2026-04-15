@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Fikra Tech</title>
+  <meta name="description" content="Contact Fikra Tech for websites, web apps, cloud deployments, and Hostec managed hosting."/>
+  <meta name="theme-color" content="#0b1223"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+  <div class="bg-blob one"></div><div class="bg-blob two"></div><div class="bg-blob three"></div>
+  <div class="noise"></div>
+  <canvas id="particles"></canvas>
+
+  <!-- NAV -->
+  <nav class="fixed w-full z-50 bg-gray-900/70 backdrop-blur border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold gradient-text">Fikra Tech</a>
+      <div class="hidden md:flex space-x-6 text-sm items-center">
+        <a data-nav class="navlink" href="services.html">Services</a>
+        <a data-nav class="navlink" href="hosting.html">Hostec</a>
+        <a data-nav class="navlink" href="work.html">Work</a>
+        <a data-nav class="navlink" href="team.html">Team</a>
+        <a data-nav class="navlink" href="contact.html">Contact</a>
+        <a class="btn-glow px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition text-sm" href="contact.html">Get a Quote</a>
+      </div>
+      <button id="menuBtn" aria-expanded="false" class="md:hidden text-gray-200 text-xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <div id="mobileMenu" class="md:hidden border-t border-gray-800 bg-gray-900/70 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3 text-sm">
+        <a data-nav class="navlink" href="services.html">Services</a>
+        <a data-nav class="navlink" href="hosting.html">Hostec</a>
+        <a data-nav class="navlink" href="work.html">Work</a>
+        <a data-nav class="navlink" href="team.html">Team</a>
+        <a data-nav class="navlink" href="contact.html">Contact</a>
+        <a class="btn-glow px-4 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition text-center" href="contact.html">Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-6 pt-28 pb-20">
+    <header class="reveal">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Let’s build your <span class="gradient-text">next project</span></h1>
+      <p class="text-gray-300/90 max-w-3xl">
+        Tell us what you need. We reply fast, propose a scope, timeline, and the best plan (build + optional managed hosting).
+      </p>
+      <div class="mt-8 divider"></div>
+    </header>
+
+    <section class="grid md:grid-cols-2 gap-10 mt-12">
+      <div class="reveal delay-1 space-y-4 text-gray-300">
+        <div class="glass rounded-3xl p-7 card-hover">
+          <div class="text-sm text-gray-400 mb-2">Direct</div>
+          <p class="mb-2"><i class="fa-solid fa-envelope text-indigo-300 mr-2"></i>
+            <a class="text-indigo-300 hover:underline" href="mailto:anes44603@gmail.com">anes44603@gmail.com</a>
+          </p>
+          <p class="mb-2"><i class="fa-solid fa-phone text-indigo-300 mr-2"></i>
+            <a class="text-indigo-300 hover:underline" href="tel:+213551054538">+213 551 054 538</a>
+          </p>
+          <p class="text-sm text-gray-400">Remote • Worldwide</p>
+
+          <div class="mt-5 flex gap-3 flex-wrap">
+            <a class="btn-glow px-5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 font-semibold transition text-sm"
+               href="https://wa.me/213551054538" target="_blank" rel="noopener">
+              WhatsApp
+            </a>
+            <a class="btn-glow px-5 py-2 rounded-lg border border-indigo-500 hover:border-indigo-400 font-semibold transition text-sm"
+               href="services.html">Services</a>
+            <a class="btn-glow px-5 py-2 rounded-lg border border-indigo-500 hover:border-indigo-400 font-semibold transition text-sm"
+               href="hosting.html">Hostec</a>
+          </div>
+        </div>
+
+        <div class="glass rounded-3xl p-7 card-hover">
+          <div class="text-sm text-gray-400 mb-2">What to include</div>
+          <ul class="text-sm text-gray-300 space-y-2">
+            <li>✅ Your industry + goal</li>
+            <li>✅ Example sites you like</li>
+            <li>✅ Deadline (if any)</li>
+            <li>✅ Pages / features needed</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <form action="https://formspree.io/f/xnjjrdwj" method="POST"
+        class="reveal delay-2 glass rounded-2xl p-6 space-y-4">
+        <div>
+          <label class="text-sm text-gray-300">Your Name</label>
+          <input type="text" name="name" required
+            class="mt-2 w-full px-4 py-3 rounded bg-gray-800/70 border border-gray-700 focus:border-indigo-500 transition" />
+        </div>
+
+        <div>
+          <label class="text-sm text-gray-300">Your Email</label>
+          <input type="email" name="email" required
+            class="mt-2 w-full px-4 py-3 rounded bg-gray-800/70 border border-gray-700 focus:border-indigo-500 transition" />
+        </div>
+
+        <!-- Checkboxes -->
+        <div>
+          <label class="text-sm text-gray-300">What do you need?</label>
+          <div class="mt-2 grid grid-cols-1 gap-2 text-sm text-gray-300">
+            <label class="flex items-center gap-2">
+              <input type="checkbox" name="need_website" class="accent-indigo-500"> Website / Landing Page
+            </label>
+            <label class="flex items-center gap-2">
+              <input type="checkbox" name="need_webapp" class="accent-indigo-500"> Web App / Dashboard
+            </label>
+            <label class="flex items-center gap-2">
+              <input type="checkbox" name="need_hosting" class="accent-indigo-500"> Hosting / Maintenance (Hostec)
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label class="text-sm text-gray-300">Message</label>
+          <textarea name="message" rows="5" required
+            class="mt-2 w-full px-4 py-3 rounded bg-gray-800/70 border border-gray-700 focus:border-indigo-500 transition"
+            placeholder="Tell me what you want to build (website, dashboard, deployment, hosting plan)…"></textarea>
+        </div>
+
+        <button type="submit"
+          class="btn-glow w-full py-3 bg-indigo-600 hover:bg-indigo-500 rounded-lg font-semibold transition">
+          Send Message
+      </button>
+      </form>
+    </div>
+  </section>
+    </section>
+  </main>
+
+  <footer class="text-center py-10 border-t border-gray-800">
+    <p class="text-gray-500 text-sm">© 2026 Fikra Tech • Contact</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

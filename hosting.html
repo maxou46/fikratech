@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hostec | Managed Hosting</title>
+  <meta name="description" content="Hostec managed hosting: SSL, backups, monitoring, maintenance, performance and support."/>
+  <meta name="theme-color" content="#0b1223"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+  <div class="bg-blob one"></div><div class="bg-blob two"></div><div class="bg-blob three"></div>
+  <div class="noise"></div>
+  <canvas id="particles"></canvas>
+
+  <!-- NAV -->
+  <nav class="fixed w-full z-50 bg-gray-900/70 backdrop-blur border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold gradient-text">Fikra Tech</a>
+      <div class="hidden md:flex space-x-6 text-sm items-center">
+        <a data-nav class="navlink" href="services.html">Services</a>
+        <a data-nav class="navlink" href="hosting.html">Hostec</a>
+        <a data-nav class="navlink" href="work.html">Work</a>
+        <a data-nav class="navlink" href="team.html">Team</a>
+        <a data-nav class="navlink" href="contact.html">Contact</a>
+        <a class="btn-glow px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition text-sm" href="contact.html">Get a Quote</a>
+      </div>
+      <button id="menuBtn" aria-expanded="false" class="md:hidden text-gray-200 text-xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <div id="mobileMenu" class="md:hidden border-t border-gray-800 bg-gray-900/70 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3 text-sm">
+        <a data-nav class="navlink" href="services.html">Services</a>
+        <a data-nav class="navlink" href="hosting.html">Hostec</a>
+        <a data-nav class="navlink" href="work.html">Work</a>
+        <a data-nav class="navlink" href="team.html">Team</a>
+        <a data-nav class="navlink" href="contact.html">Contact</a>
+        <a class="btn-glow px-4 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition text-center" href="contact.html">Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-6 pt-28 pb-20">
+    <header class="reveal">
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="badge"><i class="fa-solid fa-shield text-emerald-300"></i> Hostec Managed Hosting</span>
+        <span class="badge"><i class="fa-solid fa-rotate text-indigo-300"></i> Backups + Monitoring</span>
+        <span class="badge"><i class="fa-solid fa-lock text-violet-300"></i> SSL + Security</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Hosting that feels <span class="gradient-text">hands-off</span></h1>
+      <p class="text-gray-300/90 max-w-3xl">
+        Many hosting companies are cheap, but you still do all the work.
+        Hostec is different: we manage setup, uptime, updates, backups, and support.
+      </p>
+      <div class="mt-8 divider"></div>
+    </header>
+
+    <section class="grid md:grid-cols-3 gap-8 mt-12">
+      <div class="reveal delay-1 glass rounded-3xl p-8 card-hover">
+        <h3 class="text-xl font-bold mb-2">Core Included</h3>
+        <ul class="text-gray-300 text-sm space-y-2">
+          <li>✅ SSL + HTTPS</li>
+          <li>✅ Automated backups</li>
+          <li>✅ Uptime monitoring</li>
+          <li>✅ Basic security hardening</li>
+          <li>✅ Performance tuning</li>
+        </ul>
+      </div>
+
+      <div class="reveal delay-2 glass rounded-3xl p-8 card-hover">
+        <h3 class="text-xl font-bold mb-2">Maintenance</h3>
+        <ul class="text-gray-300 text-sm space-y-2">
+          <li>✅ Updates & patching</li>
+          <li>✅ Small content edits (plan-based)</li>
+          <li>✅ Incident response</li>
+          <li>✅ Monthly health report</li>
+        </ul>
+      </div>
+
+      <div class="reveal delay-3 glass rounded-3xl p-8 card-hover">
+        <h3 class="text-xl font-bold mb-2">Optional Add-Ons</h3>
+        <ul class="text-gray-300 text-sm space-y-2">
+          <li>✅ Custom domain setup</li>
+          <li>✅ Email/domain DNS help</li>
+          <li>✅ CDN & caching</li>
+          <li>✅ Advanced logging</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PLANS -->
+    <section class="mt-14">
+      <h2 class="text-3xl font-bold mb-10 text-center reveal">Hosting <span class="gradient-text">plans</span></h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="reveal delay-1 glass rounded-3xl p-8 card-hover">
+          <h3 class="text-xl font-bold mb-2">Starter</h3>
+          <p class="text-gray-400 text-sm mb-5">For small websites / landing pages.</p>
+          <ul class="text-gray-300 text-sm space-y-2 mb-6">
+            <li>✅ SSL</li><li>✅ Backups</li><li>✅ Monitoring</li><li>✅ Basic support</li>
+          </ul>
+          <a href="contact.html" class="btn-glow w-full block text-center px-6 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 font-semibold transition">Ask for Price</a>
+        </div>
+
+        <div class="reveal delay-2 glass rounded-3xl p-8 card-hover border border-indigo-500/30">
+          <h3 class="text-xl font-bold mb-2">Business</h3>
+          <p class="text-gray-400 text-sm mb-5">For businesses that need stability.</p>
+          <ul class="text-gray-300 text-sm space-y-2 mb-6">
+            <li>✅ Everything in Starter</li><li>✅ Faster support</li><li>✅ Monthly report</li><li>✅ Small edits plan</li>
+          </ul>
+          <a href="contact.html" class="btn-glow w-full block text-center px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition">Get a Quote</a>
+        </div>
+
+        <div class="reveal delay-3 glass rounded-3xl p-8 card-hover">
+          <h3 class="text-xl font-bold mb-2">Pro</h3>
+          <p class="text-gray-400 text-sm mb-5">For web apps / higher traffic.</p>
+          <ul class="text-gray-300 text-sm space-y-2 mb-6">
+            <li>✅ Everything in Business</li><li>✅ Advanced monitoring</li><li>✅ Deployment pipeline</li><li>✅ Priority support</li>
+          </ul>
+          <a href="contact.html" class="btn-glow w-full block text-center px-6 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 font-semibold transition">Talk to Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-14 reveal glass rounded-3xl p-8">
+      <h2 class="text-2xl font-bold mb-3">Why some hosts are “$1”</h2>
+      <p class="text-gray-400">
+        Cheap hosting is usually **intro price** + upsells, and you still do the work.
+        Hostec is managed hosting: you pay for **reliability + time saved + support**.
+      </p>
+    </section>
+  </main>
+
+  <footer class="text-center py-10 border-t border-gray-800">
+    <p class="text-gray-500 text-sm">© 2026 Hostec • Managed Hosting by Fikra Tech</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

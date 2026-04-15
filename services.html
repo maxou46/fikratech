@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | Fikra Tech</title>
+  <meta name="description" content="Detailed services: websites, web apps, cloud deployments, automation, maintenance, and consulting."/>
+  <meta name="theme-color" content="#0b1223"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+  <div class="bg-blob one"></div><div class="bg-blob two"></div><div class="bg-blob three"></div>
+  <div class="noise"></div>
+  <canvas id="particles"></canvas>
+
+  <!-- NAV -->
+  <nav class="fixed w-full z-50 bg-gray-900/70 backdrop-blur border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold gradient-text">Fikra Tech</a>
+      <div class="hidden md:flex space-x-6 text-sm items-center">
+        <a data-nav class="navlink" href="services.html">Services</a>
+        <a data-nav class="navlink" href="hosting.html">Hostec</a>
+        <a data-nav class="navlink" href="work.html">Work</a>
+        <a data-nav class="navlink" href="team.html">Team</a>
+        <a data-nav class="navlink" href="contact.html">Contact</a>
+        <a class="btn-glow px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition text-sm" href="contact.html">Get a Quote</a>
+      </div>
+      <button id="menuBtn" aria-expanded="false" class="md:hidden text-gray-200 text-xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-gray-800 bg-gray-900/70 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3 text-sm">
+        <a data-nav class="navlink" href="services.html">Services</a>
+        <a data-nav class="navlink" href="hosting.html">Hostec</a>
+        <a data-nav class="navlink" href="work.html">Work</a>
+        <a data-nav class="navlink" href="team.html">Team</a>
+        <a data-nav class="navlink" href="contact.html">Contact</a>
+        <a class="btn-glow px-4 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition text-center" href="contact.html">Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-6 pt-28 pb-20">
+    <header class="reveal">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Services built for <span class="gradient-text">results</span></h1>
+      <p class="text-gray-300/90 max-w-3xl">
+        We deliver modern web experiences + reliable infrastructure. Choose a one-time build (Fikra Tech),
+        and add monthly stability with Hostec.
+      </p>
+      <div class="mt-8 divider"></div>
+    </header>
+
+    <!-- SERVICES GRID -->
+    <section class="grid md:grid-cols-2 gap-8 mt-12">
+      <div class="reveal delay-1 glass rounded-3xl p-8 card-hover">
+        <div class="text-indigo-300 text-xl font-bold mb-2">
+          <i class="fa-solid fa-layer-group mr-2"></i>Websites & Landing Pages
+        </div>
+        <p class="text-gray-400 mb-4">Perfect for businesses that need a premium online presence and more leads.</p>
+        <ul class="text-gray-300 text-sm space-y-2">
+          <li>✅ Responsive design (mobile-first)</li>
+          <li>✅ Contact funnel: form + WhatsApp + email</li>
+          <li>✅ Speed & SEO basics (metadata, performance)</li>
+          <li>✅ Deployment + SSL + domain connection</li>
+        </ul>
+      </div>
+
+      <div class="reveal delay-2 glass rounded-3xl p-8 card-hover">
+        <div class="text-indigo-300 text-xl font-bold mb-2">
+          <i class="fa-solid fa-chart-line mr-2"></i>Managed Web Hosting
+        </div>
+        <p class="text-gray-400 mb-4">
+          Fully managed hosting optimized for speed, security, and uptime — we handle setup, maintenance,
+          and monitoring so you can focus on your business.
+        </p>
+        <ul class="text-gray-300 text-sm space-y-2">
+          <li>✅ 99.9% uptime monitoring</li>
+          <li>✅ SSL certificates & security hardening</li>
+          <li>✅ Automated backups & recovery</li>
+          <li>✅ Performance optimization & caching</li>
+        </ul>
+      </div>
+
+      <div class="reveal delay-1 glass rounded-3xl p-8 card-hover">
+        <div class="text-emerald-300 text-xl font-bold mb-2">
+          <i class="fa-solid fa-globe mr-2"></i>Domain Name Management
+        </div>
+        <p class="text-gray-400 mb-4">
+          We handle your domain professionally so your business stays accessible and secure.
+        </p>
+        <ul class="text-gray-300 text-sm space-y-2">
+          <li>✅ Domain purchase & configuration</li>
+          <li>✅ DNS setup and management</li>
+          <li>✅ Domain connection to hosting & website</li>
+          <li>✅ Renewal management & expiration protection</li>
+          <li>✅ Subdomains & professional email setup</li>
+        </ul>
+      </div>
+
+      <div class="reveal delay-2 glass rounded-3xl p-8 card-hover">
+        <div class="text-emerald-300 text-xl font-bold mb-2">
+          <i class="fa-solid fa-gears mr-2"></i>Automation & CI/CD
+        </div>
+        <p class="text-gray-400 mb-4">Faster releases, fewer bugs, safer deployments.</p>
+        <ul class="text-gray-300 text-sm space-y-2">
+          <li>✅ GitHub Actions CI/CD pipelines</li>
+          <li>✅ Environment separation (dev/staging/prod)</li>
+          <li>✅ Rollback strategy</li>
+          <li>✅ Deployment documentation</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PRICING / PLANS -->
+    <section class="mt-14 reveal">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Pricing & <span class="gradient-text">Plans</span>
+      </h2>
+      <p class="text-gray-300/90 max-w-3xl">
+        Choose a one-time website build (Fikra Tech), and add monthly/yearly stability with Hostec hosting.
+        Transparent pricing, no surprises.
+      </p>
+
+      <!-- FULL WIDTH cards (2 columns on desktop, 1 column on mobile) -->
+      <div class="mt-8 grid md:grid-cols-2 gap-8">
+        <!-- Website Build -->
+        <div class="glass rounded-3xl p-8 card-hover reveal delay-1 w-full">
+          <div class="flex items-center justify-between mb-3">
+            <div class="text-indigo-300 text-xl font-bold">
+              <i class="fa-solid fa-layer-group mr-2"></i>Website Build
+            </div>
+            <span class="text-xs px-3 py-1 rounded-full border border-indigo-500/50 text-indigo-200">
+              One-time
+            </span>
+          </div>
+
+          <div class="mb-1 text-gray-400 font-medium">Starting from</div>
+
+          <div class="text-4xl font-extrabold mb-2">
+            30,000–40,000<span class="text-base font-semibold text-gray-400 ml-2">DA</span>
+          </div>
+          <div class="text-gray-400 mb-5">≈ $150–$200 • Landing page / Business website</div>
+
+          <ul class="text-gray-300 text-sm space-y-2 mb-6">
+            <li>✅ Modern responsive design</li>
+            <li>✅ Contact (WhatsApp / Email / Form)</li>
+            <li>✅ Basic SEO + performance</li>
+            <li>✅ Deployment + SSL + domain connection</li>
+          </ul>
+
+          <a href="contact.html"
+             class="btn-glow w-full inline-block text-center px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition">
+            Get a Quote
+          </a>
+        </div>
+
+        <!-- Hostec Hosting -->
+        <div class="glass rounded-3xl p-8 card-hover reveal delay-2 border border-emerald-500/25 w-full">
+          <div class="flex items-center justify-between mb-3">
+            <div class="text-emerald-300 text-xl font-bold">
+              <i class="fa-solid fa-server mr-2"></i>Hostec Hosting
+            </div>
+            <span class="text-xs px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/40 text-emerald-200">
+              Starting
+            </span>
+          </div>
+
+          <div class="mb-1 text-gray-400 font-medium">Starting from</div>
+
+          <div class="text-4xl font-extrabold mb-2">
+            3500<span class="text-base font-semibold text-gray-400 ml-2">DA / year</span>
+          </div>
+
+          <div class="text-gray-400 mb-5">Or starting from $2/month</div>
+
+          <ul class="text-gray-300 text-sm space-y-2 mb-6">
+            <li>✅ Fast & secure hosting</li>
+            <li>✅ SSL + monitoring</li>
+            <li>✅ Backups & recovery</li>
+            <li>✅ Support & maintenance</li>
+          </ul>
+
+          <a href="hosting.html"
+             class="btn-glow w-full inline-block text-center px-6 py-3 rounded-lg border border-emerald-500 hover:border-emerald-400 font-semibold transition">
+            View Hosting Plans
+          </a>
+        </div>
+      </div>
+
+      <!-- Optional note / custom pricing -->
+      <div class="mt-8 glass rounded-3xl p-6 reveal">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <p class="text-gray-300">
+            Need something custom (web app, automation, admin dashboard)? We’ll estimate based on features and timeline.
+          </p>
+          <a href="contact.html"
+             class="btn-glow px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition text-center">
+            Request Custom Pricing
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional: Consultation -->
+    <section class="mt-14 reveal glass rounded-3xl p-8">
+      <h2 class="text-2xl font-bold mb-3">Optional: Consultation</h2>
+      <p class="text-gray-400 mb-6">
+        If you only need advice (architecture, cloud choices, performance, hosting), we can do a paid consult.
+        It’s the fastest way to avoid expensive mistakes.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a class="btn-glow px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition" href="contact.html">Book a Call</a>
+        <a class="btn-glow px-6 py-3 rounded-lg border border-indigo-500 hover:border-indigo-400 font-semibold transition" href="hosting.html">See Hostec Plans</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-10 border-t border-gray-800">
+    <p class="text-gray-500 text-sm">© 2026 Fikra Tech • Services</p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle (safe if you don't already have it in assets/app.js)
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener("click", () => {
+        const expanded = menuBtn.getAttribute("aria-expanded") === "true";
+        menuBtn.setAttribute("aria-expanded", String(!expanded));
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+  </script>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

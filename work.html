@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Work | Fikra Tech</title>
+  <meta name="description" content="Portfolio and case studies: websites, dashboards, deployments, and managed hosting."/>
+  <meta name="theme-color" content="#0b1223"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+  <div class="bg-blob one"></div><div class="bg-blob two"></div><div class="bg-blob three"></div>
+  <div class="noise"></div>
+  <canvas id="particles"></canvas>
+
+  <!-- NAV -->
+  <nav class="fixed w-full z-50 bg-gray-900/70 backdrop-blur border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold gradient-text">Fikra Tech</a>
+      <div class="hidden md:flex space-x-6 text-sm items-center">
+        <a data-nav class="navlink" href="services.html">Services</a>
+        <a data-nav class="navlink" href="hosting.html">Hostec</a>
+        <a data-nav class="navlink" href="work.html">Work</a>
+        <a data-nav class="navlink" href="team.html">Team</a>
+        <a data-nav class="navlink" href="contact.html">Contact</a>
+        <a class="btn-glow px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition text-sm" href="contact.html">Get a Quote</a>
+      </div>
+      <button id="menuBtn" aria-expanded="false" class="md:hidden text-gray-200 text-xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <div id="mobileMenu" class="md:hidden border-t border-gray-800 bg-gray-900/70 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3 text-sm">
+        <a data-nav class="navlink" href="services.html">Services</a>
+        <a data-nav class="navlink" href="hosting.html">Hostec</a>
+        <a data-nav class="navlink" href="work.html">Work</a>
+        <a data-nav class="navlink" href="team.html">Team</a>
+        <a data-nav class="navlink" href="contact.html">Contact</a>
+        <a class="btn-glow px-4 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition text-center" href="contact.html">Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-6 pt-28 pb-20">
+    <header class="reveal">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Work that looks <span class="gradient-text">premium</span></h1>
+      <p class="text-gray-300/90 max-w-3xl">
+        These are example case studies you can replace with real client projects.
+        Keep the structure: problem → solution → result.
+      </p>
+      <div class="mt-8 divider"></div>
+    </header>
+
+    <section class="grid md:grid-cols-2 gap-8 mt-12">
+      <article class="reveal delay-1 glass rounded-3xl p-8 card-hover">
+        <div class="text-indigo-300 font-bold mb-2">Case Study • Restaurant Website</div>
+        <h2 class="text-2xl font-bold mb-3">A fast menu & booking website</h2>
+        <p class="text-gray-400 mb-5">
+          Built a modern website with a strong CTA to WhatsApp, and a clean menu layout optimized for mobile.
+        </p>
+        <ul class="text-gray-300 text-sm space-y-2 mb-6">
+          <li>✅ Mobile-first design</li>
+          <li>✅ WhatsApp CTA funnel</li>
+          <li>✅ SEO basics + performance</li>
+        </ul>
+        <div class="text-sm text-gray-400">Tech: HTML/CSS/JS • Deploy • SSL</div>
+      </article>
+
+      <article class="reveal delay-2 glass rounded-3xl p-8 card-hover">
+        <div class="text-indigo-300 font-bold mb-2">Case Study • Business Landing</div>
+        <h2 class="text-2xl font-bold mb-3">Lead generation landing page</h2>
+        <p class="text-gray-400 mb-5">
+          Designed a conversion-focused page with strong messaging, trust blocks, and a clear contact flow.
+        </p>
+        <ul class="text-gray-300 text-sm space-y-2 mb-6">
+          <li>✅ Strong headline + proof blocks</li>
+          <li>✅ Contact form + email</li>
+          <li>✅ Clean UI + speed</li>
+        </ul>
+        <div class="text-sm text-gray-400">Tech: Tailwind • Forms • Deploy</div>
+      </article>
+
+      <article class="reveal delay-1 glass rounded-3xl p-8 card-hover">
+        <div class="text-emerald-300 font-bold mb-2">Case Study • Hostec Setup</div>
+        <h2 class="text-2xl font-bold mb-3">Managed hosting pipeline</h2>
+        <p class="text-gray-400 mb-5">
+          Setup SSL, automated backups, monitoring, and a safe deployment process for a business website.
+        </p>
+        <ul class="text-gray-300 text-sm space-y-2 mb-6">
+          <li>✅ SSL + DNS</li>
+          <li>✅ Backup schedule</li>
+          <li>✅ Monitoring alerts</li>
+        </ul>
+        <div class="text-sm text-gray-400">Tech: Linux • Docker • Nginx • Monitoring</div>
+      </article>
+
+      <article class="reveal delay-2 glass rounded-3xl p-8 card-hover">
+        <div class="text-emerald-300 font-bold mb-2">Case Study • Dashboard</div>
+        <h2 class="text-2xl font-bold mb-3">Admin panel for operations</h2>
+        <p class="text-gray-400 mb-5">
+          Built a dashboard concept: users, roles, database records, and analytics blocks.
+        </p>
+        <ul class="text-gray-300 text-sm space-y-2 mb-6">
+          <li>✅ Auth + roles</li>
+          <li>✅ Clean admin UI</li>
+          <li>✅ Deploy & maintain</li>
+        </ul>
+        <div class="text-sm text-gray-400">Tech: API • DB • Hosting</div>
+      </article>
+    </section>
+
+    <section class="mt-14 reveal glass rounded-3xl p-8">
+      <h2 class="text-2xl font-bold mb-3">Replace with real projects</h2>
+      <p class="text-gray-400 mb-6">
+        After your first 2–3 clients, update this page with real results:
+        before/after, timeline, and what you improved (speed, design, messages).
+      </p>
+      <a href="contact.html" class="btn-glow px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-semibold transition">Start a Project</a>
+    </section>
+  </main>
+
+  <footer class="text-center py-10 border-t border-gray-800">
+    <p class="text-gray-500 text-sm">© 2026 Fikra Tech • Work</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
